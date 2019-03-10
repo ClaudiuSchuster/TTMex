@@ -75,12 +75,12 @@ while (1) {
     }
     pop(@data);
 
-    my ($amountTotal,$amount1M,$amount7d,$amount3d,$amount2d,$amount1d) = (0,0,0,0,0,0);
+    my ($amountTotal,$amount1M,$amount1W,$amount3d,$amount2d,$amount1d) = (0,0,0,0,0,0);
     for (reverse @data) {
         if( $_->{transactType} =~ /RealisedPNL|UnrealisedPNL|AffiliatePayout/ ) {
             $amountTotal += $_->{amount};
             $amount1M    += $_->{amount} if( $_->{timestamp} >= time - 86400*30.436875 );
-            $amount7d    += $_->{amount} if( $_->{timestamp} >= time - 86400*7 );
+            $amount1W    += $_->{amount} if( $_->{timestamp} >= time - 86400*7 );
             $amount3d    += $_->{amount} if( $_->{timestamp} >= time - 86400*3 );
             $amount2d    += $_->{amount} if( $_->{timestamp} >= time - 86400*2 );
             $amount1d    += $_->{amount} if( $_->{timestamp} >= time - 86400 );
@@ -89,7 +89,7 @@ while (1) {
     
     my $profits = "Total: ".sprintf("%+.2f", $amountTotal/10**8)
                   ."    1M: ".sprintf("%+.2f", $amount1M/10**8)
-                  ."    7D: ".sprintf("%+.2f", $amount7d/10**8)
+                  ."    1W: ".sprintf("%+.2f", $amount1W/10**8)
                   ."    3D: ".sprintf("%+.2f", $amount3d/10**8)
                   ."    2D: ".sprintf("%+.2f", $amount2d/10**8)
                   ."    1D: ".sprintf("%+.4f", $amount1d/10**8)
@@ -122,7 +122,7 @@ while (1) {
                       ."\tLiq: ".( $_->{liquidationPrice} < 0.001 ? $_->{liquidationPrice} == 0 ? sprintf("%-10s", 0) : sprintf("%.8f", $_->{liquidationPrice}) : sprintf("%-10s", $_->{liquidationPrice}) )
                       ." \tU-PNL: ".sprintf("%+.4f", $_->{unrealisedPnl}/10**8)
                       ."\t\tR-PNL: ".sprintf("%+.4f", $_->{realisedPnl}/10**8)
-                      ."\n";
+                      ."\n" if( defined $_->{avgEntryPrice} );
     }
     
     print ".|";

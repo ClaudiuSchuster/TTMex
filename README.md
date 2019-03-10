@@ -2,10 +2,10 @@
 # https://blockfidelity.com
 
 Download ready-to-run executable from 'Releases'-Page or out of the /TTMex/PerlApp/build/ folder!
-https://github.com/ClaudiuSchuster/TTMex/releases/download/v1.0.0.1/v1.0.0.1.zip
+https://github.com/ClaudiuSchuster/TTMex/releases/download/v1.0.1.0/v1.0.1.0.zip
 
 HowTo: \
-Create a "read-only" API-Key and API-Secret under you Bitmex Account-Page and configure TTMex.cfg before running TTMex.exe.
+Create a "read-only" API-Key and API-Secret under your Bitmex Account-Page and configure TTMex.cfg before running TTMex.exe.
 If you penetrate Bitmex for to long without permission (data fetching error) your IP-address will be banned for some hours.
 
 Open TTMex.cfg with Notepad or any other texteditor and fill out apiKey and apiSecret first! \

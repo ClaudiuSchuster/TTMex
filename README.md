@@ -10,6 +10,6 @@ If you penetrate Bitmex for to long without permission (data fetching error) you
 
 Open TTMex.cfg with Notepad or any other texteditor and fill out apiKey and apiSecret first! \
  apiKey=YourApiKey \
- apiSecret=YourApiSecret \
+ apiSecret=YourApiSecret
  
 ![TTMex](https://user-images.githubusercontent.com/13591392/54078974-edb2e380-42d2-11e9-8cfd-632f6c8a7a9e.PNG)

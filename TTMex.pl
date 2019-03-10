@@ -139,7 +139,7 @@ while (1) {
     $screenOutput .= "\n\n==== Active Orders "; $screenOutput .= '=' x 128;
     for (@data) { # ["symbol","side","orderQty","leavesQty","cumQty","price","ordType","execInst"] # execInst=ReduceOnly
         $screenOutput .= "\n ".$_->{symbol}."\t   ".sprintf("%4s", uc($_->{side})).": ".sprintf("%-8s", $_->{orderQty})
-                      ."\tPrice: ".( $_->{price} < 0.001 ? sprintf("%.8f", $_->{price}) : sprintf("%-10s", $_->{price}) )
+                      ."\tPrice: ".(!defined $_->{price} && $_->{ordType} eq 'Stop' ? sprintf("%-10s", 'Market') : $_->{price} < 0.001 ? sprintf("%.8f", $_->{price}) : sprintf("%-10s", $_->{price}) )
                       ." \tLeaves: ".sprintf("%-10s", $_->{leavesQty})
                       ." \tCum: ".sprintf("%-10s", $_->{cumQty})
                       ."\tType: ".sprintf("%-10s", $_->{ordType})

@@ -1,0 +1,37 @@
+#!C:\Program Files\ActiveState Perl Dev Kit 9.5.1\bin\perlapp-gui.exe
+PAP-Version: 1.0
+Packer: C:\Program Files\ActiveState Perl Dev Kit 9.5.1\bin\perlapp.exe
+Script: TTMex.pl
+Cwd: C:\videos\TTMex
+Byref: 0
+Clean: 1
+Date: 2019-03-10 00:29:11
+Debug: 
+Dependent: 0
+Dyndll: 0
+Exe: PerlApp\build\TTMex.exe
+Force: 1
+Gui: 0
+Hostname: workstation
+Icon: PerlApp\logo.ico
+Manifest: 
+No-Compress: 0
+No-Gui: 0
+No-Logo: 0
+Runlib: 
+Shared: none
+Singleton: 0
+Tmpdir: 
+Verbose: 0
+Version-Comments: 
+Version-CompanyName: Trade To Moon
+Version-FileDescription: https://blockfidelity.com
+Version-FileVersion: 1.0.0
+Version-InternalName: 
+Version-LegalCopyright: 
+Version-LegalTrademarks: 
+Version-OriginalFilename: TTMex - Trade To Moon Bitm'ex Bot
+Version-ProductName: TTMex - Trade To Moon Bitm'ex Bot
+Version-ProductVersion: 1.0.0
+Warnings: 1
+Xclude: 0

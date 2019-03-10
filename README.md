@@ -2,7 +2,7 @@
 # https://blockfidelity.com
 
 Download ready-to-run executable from 'Releases'-Page or out of the /TTMex/PerlApp/build/ folder!
-https://github.com/ClaudiuSchuster/TTMex/releases/download/v1.0.0/v1.0.0.zip
+https://github.com/ClaudiuSchuster/TTMex/releases/download/v1.0.0.1/v1.0.0.1.zip
 
 HowTo: \
 Create a "read-only" API-Key and API-Secret under you Bitmex Account-Page and configure TTMex.cfg before running TTMex.exe.

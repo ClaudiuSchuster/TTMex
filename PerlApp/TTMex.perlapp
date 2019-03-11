@@ -5,7 +5,7 @@ Script: TTMex.pl
 Cwd: C:\videos\TTMex
 Byref: 0
 Clean: 1
-Date: 2019-03-10 06:15:55
+Date: 2019-03-12 00:22:23
 Debug: 
 Dependent: 0
 Dyndll: 0
@@ -26,12 +26,12 @@ Verbose: 0
 Version-Comments: 
 Version-CompanyName: Trade To Moon
 Version-FileDescription: TTMex - Trade To Moon Bitm'ex Bot
-Version-FileVersion: 1.0.1.1
+Version-FileVersion: 1.0.2.0
 Version-InternalName: 
 Version-LegalCopyright: https://blockfidelity.com
 Version-LegalTrademarks: 
 Version-OriginalFilename: 
 Version-ProductName: TTMex - Trade To Moon Bitm'ex Bot
-Version-ProductVersion: 1.0.1.1
+Version-ProductVersion: 1.0.2.0
 Warnings: 1
 Xclude: 0

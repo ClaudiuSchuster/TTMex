@@ -23,6 +23,7 @@ my $Config                     = Config::Tiny->new;
 $Config                        = Config::Tiny->read( 'TTMex.cfg' );
 my $apiKey                     = $Config->{_}->{apiKey};
 my $apiSecret                  = $Config->{_}->{apiSecret};
+my $testnet                    = $Config->{_}->{testnet};
 my $data_startTime             = $Config->{_}->{data_startTime};
 my $profitsFilename            = $Config->{_}->{profitsFilename};
 my $requestExpireSec           = $Config->{_}->{requestExpireSec};
@@ -33,7 +34,7 @@ my $minimumSleep               = $Config->{_}->{minimumSleep};
 #### SUBS #####
 sub getData {
     my $query = shift;
-    my $url       = 'https://www.bitmex.com';
+    my $url       = $testnet ? 'https://testnet.bitmex.com' : 'https://www.bitmex.com';
     my $expires   = time + $requestExpireSec;
     
     my $req = HTTP::Request->new( 'GET', $url.$query );
